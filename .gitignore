@@ -1,0 +1,10 @@
+#ignore gedit backups
+*~
+
+#ignore object files
+objects/*
+*.o
+
+#ignore executables
+flatcore
+flatcore_test

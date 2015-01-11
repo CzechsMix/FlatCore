@@ -7,10 +7,11 @@
 #include <stdio.h>
 #include <allegro5/allegro.h>
 
+//STL
+#include <string>
+
 //FlatCore geometry
 #include "vector.h"
 
-//STL
-#include <string>
 
 #endif //HEADERS_H

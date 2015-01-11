@@ -2,51 +2,40 @@
 #define SPRITE_H
 
 #include "headers.h"
+#include "drawable.h"
 
 //for std::string
 using namespace std;
 
 namespace flatcore
 {
-	class Sprite
+	class Sprite: public Drawable
 	{
 		//member variables
 		protected:
-			ALLEGRO_BITMAP* 		m_abImage;
-			int 								m_iZOrder;
-			Vector							m_iLocation;
-			Vector							m_iSize;
-			Vector							m_iVelocity;
+			Vector							m_vVelocity;
 
 		public:
 			//Ctor
-			Sprite(string szImageFilename, int iZorder, Vector vLocation, Vector vVelocity);
+			Sprite(ALLEGRO_BITMAP *abImage,
+							int iZOrder,
+							Vector vLocation,
+							Vector vVelocity);
 			
 			//Dtor
 			~Sprite();
 
 			//Getters/Setters
-			//Image
-			ALLEGRO_BITMAP*			getImage();
-			void								setImage(ALLEGRO_BITMAP* abImage);
-			//Z-Order
-			int									getZOrder();
-			void								setZOrder(int iZorder);
-			//Location
-			Vector							getLocation();
-			void								setLocation(Vector vLocation)
-			//Size
-			Vector							getSize();
-			void								setSize(Vector vSize);
 			//Velocity
 			Vector							getVelocity();
 			void								setVelocity(Vector vVelocity);
 
 
 			//Game Engine Methods
-			void								update();
-			void								draw();
+			virtual void				update();
+			virtual void				handleCollision(Sprite* spCollider);
 
 	};
 }
+
 #endif //SPRITE_H

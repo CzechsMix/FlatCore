@@ -5,24 +5,24 @@
 
 namespace flatcore
 {
-	class Tangible: public Drawable
-	{
-		protected:
-			//None
+  class Tangible: public Drawable
+  {
+    protected:
+      //None
 
-		public:
-			//Ctor
-			Tangible(ALLEGRO_BITMAP *abImage,
-							int iZOrder,
-							Vector vLocation);
+    public:
+      //Ctor
+      Tangible(ALLEGRO_BITMAP *abImage,
+                int iZOrder,
+                Vector vLocation);
 
-			//Dtor
-			~Tangible();
-			
-			//Game Engine Methods		
-			virtual void				handleCollision(Tangible* spCollider);
+      //Dtor
+      ~Tangible();
+      
+      //Game Engine Methods    
+      virtual void        handleCollision(Tangible* spCollider);
 
-	};
+  };
 }
 
 #endif

@@ -5,32 +5,32 @@
 
 namespace flatcore
 {
-	Sprite::Sprite(ALLEGRO_BITMAP *abImage,
-							int iZOrder,
-							Vector vLocation,
-							Vector vVelocity) : Tangible(abImage, iZOrder, vLocation)
-	{
-		//Call super?
+  Sprite::Sprite(ALLEGRO_BITMAP *abImage,
+                int iZOrder,
+                Vector vLocation,
+                Vector vVelocity) : Tangible(abImage, iZOrder, vLocation)
+  {
+    //Call super?
 
-		//set velocity
-		m_vVelocity = vVelocity;
-	}
+    //set velocity
+    m_vVelocity = vVelocity;
+  }
 
-	Sprite::~Sprite()
-	{
-		/* empty */
-	}
+  Sprite::~Sprite()
+  {
+    /* empty */
+  }
 
-	//Getters/Setters
-	Vector					Sprite::getVelocity() { return m_vVelocity; }
-	void						Sprite::setVelocity(Vector vVelocity) { m_vVelocity = vVelocity; }
+  //Getters/Setters
+  Vector          Sprite::getVelocity() { return m_vVelocity; }
+  void            Sprite::setVelocity(Vector vVelocity) { m_vVelocity = vVelocity; }
 
-	//Game Engine methods
+  //Game Engine methods
 
-	void Sprite::update(int time) 
-	{
-		/* empty */ 
-	}
+  void Sprite::update(int time) 
+  {
+    /* empty */ 
+  }
 
 }
 

@@ -1,0 +1,28 @@
+=== FlatCore ===
+
+FlatCore is a 2D game engine written in C++ for linux built upon the Allegro5 library.
+
+== Basic FlatCore Objects ==
+
+Drawable: Anything that can be drawn to the screen
+
+Tangible: Anything Drawable object that can collide with objects
+
+Sprite: Anything Tangible that can posess a velocity.
+
+=== Contributing to FlatCore ===
+
+You are absolutely welcome to fork and make changes to FlatCore.
+
+Some coding standards I try to stick to, I'd really appreciate it.
+
+1. Set your editor to emit 2 spaces instead of tabs //see if you can find THAT fun commit
+
+2. Ignore rule 1 when editing the makefile. I like it when it works.
+
+3. The open bracket goes on it's own line.
+
+4. always bracket your blocks. Even and especially single lines.
+
+5. ALLEGRO_OBJECTS, FlatCoreClass, flatcore_variable.
+

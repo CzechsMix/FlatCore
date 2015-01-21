@@ -3,8 +3,16 @@
 
 #include "game_engine.h"
 
+//FlatCore properties
+#include "properties.h"
+
 #include <iostream>
 using namespace std;
+
+//Prop constants
+#define W_WIDTH "game.window.width"
+#define W_HEIGHT "game.window.height"
+
 
 namespace flatcore
 {
@@ -75,14 +83,23 @@ namespace flatcore
 
     bool GameEngine::init()
     {
+      //don't even bother
+      if(!init_properties())
+      {
+        cerr << "Error! Unable to init properties!" << endl;
+        return false;
+      }
+
       if(!al_init())
       {
         cerr << "Error: Allegro failed to init!" << endl;
         return false;
       }
 
-      //These dimensions need to be loaded out of a property file
-      display = al_create_display(640, 480);
+      width = parseInt(PROPERTIES[W_WIDTH]);
+      height = parseInt(PROPERTIES[W_HEIGHT]);
+      display = al_create_display(width, height);
+
       if(!display)
       {
         cerr << "Error: failed to create display!" << endl;

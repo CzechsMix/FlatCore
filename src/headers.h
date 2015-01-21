@@ -10,9 +10,9 @@
 //STL
 #include <string>
 #include <list>
+#include <map>
 
 //FlatCore geometry
 #include "vector.h"
-
 
 #endif //HEADERS_H

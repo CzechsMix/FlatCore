@@ -17,6 +17,8 @@ namespace flatcore
       ALLEGRO_DISPLAY*      display;
       ALLEGRO_EVENT_QUEUE*  event_queue;
       uint                  frame;
+      int                   width;
+      int                   height;
       
     public:
       //Ctor

@@ -2,14 +2,14 @@
 #define SPRITE_H
 
 #include "headers.h"
-#include "drawable.h"
+#include "tangible.h"
 
 //for std::string
 using namespace std;
 
 namespace flatcore
 {
-	class Sprite: public Drawable
+	class Sprite: public Tangible
 	{
 		//member variables
 		protected:
@@ -32,8 +32,7 @@ namespace flatcore
 
 
 			//Game Engine Methods
-			virtual void				update();
-			virtual void				handleCollision(Sprite* spCollider);
+			virtual void				update(int time = 20);
 
 	};
 }

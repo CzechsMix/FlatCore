@@ -8,7 +8,7 @@ namespace flatcore
 	Sprite::Sprite(ALLEGRO_BITMAP *abImage,
 							int iZOrder,
 							Vector vLocation,
-							Vector vVelocity) : Drawable(abImage, iZOrder, vLocation)
+							Vector vVelocity) : Tangible(abImage, iZOrder, vLocation)
 	{
 		//Call super?
 
@@ -27,15 +27,11 @@ namespace flatcore
 
 	//Game Engine methods
 
-	void Sprite::update() 
+	void Sprite::update(int time) 
 	{
 		/* empty */ 
 	}
 
-	void Sprite::handleCollision(Sprite* spCollider)
-	{
-		/* empty */
-	}
 }
 
 #endif

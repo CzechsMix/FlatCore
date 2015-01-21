@@ -9,6 +9,7 @@
 
 //STL
 #include <string>
+#include <list>
 
 //FlatCore geometry
 #include "vector.h"

@@ -3,6 +3,8 @@
 
 //Flatcore classes
 #include "drawable.h"
+#include "tangible.h"
 #include "sprite.h"
+#include "game_engine.h"
 
 #endif

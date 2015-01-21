@@ -6,12 +6,12 @@ namespace flatcore
   class Vector
   {
     public:
-      double X;
-      double Y;
+      int X;
+      int Y;
 
       //Constructors
       Vector();
-      Vector(double x, double y);
+      Vector(int x, int y);
       Vector(const Vector& v);
 
       //Arithmetic
@@ -19,8 +19,8 @@ namespace flatcore
       Vector operator+(const Vector& v);
       Vector operator-(const Vector& v);
       //Scalar multiplication/division
-      Vector operator*(const double s);
-      Vector operator/(const double s);
+      Vector operator*(const int s);
+      Vector operator/(const int s);
   };
 }
 

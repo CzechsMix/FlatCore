@@ -11,7 +11,7 @@ namespace flatcore
     X = Y = 0;
   }
 
-  Vector::Vector(double x, double y)
+  Vector::Vector(int x, int y)
   {
     X = x; 
     Y = y;
@@ -34,12 +34,12 @@ namespace flatcore
     return Vector(X - v.X, Y - v.Y);
   }
 
-  Vector Vector::operator*(const double s)
+  Vector Vector::operator*(const int s)
   {
     return Vector(X * s, Y * s);
   }
 
-  Vector Vector::operator/(const double s)
+  Vector Vector::operator/(const int s)
   {
     return Vector(X / s, Y / s);
   }

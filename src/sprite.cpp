@@ -5,15 +5,15 @@
 
 namespace flatcore
 {
-  Sprite::Sprite(ALLEGRO_BITMAP *abImage,
-                int iZOrder,
-                Vector vLocation,
-                Vector vVelocity) : Tangible(abImage, iZOrder, vLocation)
+  Sprite::Sprite(ALLEGRO_BITMAP* image,
+                int z_order,
+                Vector location,
+                Vector velocity) : Tangible(image, z_order, location)
   {
     //Call super?
 
     //set velocity
-    m_vVelocity = vVelocity;
+    this->velocity = velocity;
   }
 
   Sprite::~Sprite()
@@ -22,8 +22,8 @@ namespace flatcore
   }
 
   //Getters/Setters
-  Vector          Sprite::getVelocity() { return m_vVelocity; }
-  void            Sprite::setVelocity(Vector vVelocity) { m_vVelocity = vVelocity; }
+  Vector          Sprite::getVelocity() { return this->velocity; }
+  void            Sprite::setVelocity(Vector vVelocity) { this->velocity = velocity; }
 
   //Game Engine methods
 

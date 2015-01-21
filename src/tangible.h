@@ -12,15 +12,15 @@ namespace flatcore
 
     public:
       //Ctor
-      Tangible(ALLEGRO_BITMAP *abImage,
-                int iZOrder,
-                Vector vLocation);
+      Tangible(ALLEGRO_BITMAP* image,
+                int z_order,
+                Vector location);
 
       //Dtor
       ~Tangible();
       
       //Game Engine Methods    
-      virtual void        handleCollision(Tangible* spCollider);
+      virtual void        handleCollision(Tangible* collider);
 
   };
 }

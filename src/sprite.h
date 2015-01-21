@@ -13,14 +13,14 @@ namespace flatcore
   {
     //member variables
     protected:
-      Vector              m_vVelocity;
+      Vector              velocity;
 
     public:
       //Ctor
-      Sprite(ALLEGRO_BITMAP *abImage,
-              int iZOrder,
-              Vector vLocation,
-              Vector vVelocity);
+      Sprite(ALLEGRO_BITMAP* image,
+              int z_order,
+              Vector location,
+              Vector velocity);
       
       //Dtor
       ~Sprite();
@@ -28,7 +28,7 @@ namespace flatcore
       //Getters/Setters
       //Velocity
       Vector              getVelocity();
-      void                setVelocity(Vector vVelocity);
+      void                setVelocity(Vector velocity);
 
 
       //Game Engine Methods

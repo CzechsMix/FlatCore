@@ -5,43 +5,43 @@
 
 namespace flatcore
 {
-  Drawable::Drawable(ALLEGRO_BITMAP *abImage,
-                      int iZOrder,
-                      Vector vLocation)
+  Drawable::Drawable(ALLEGRO_BITMAP* image,
+                      int z_order,
+                      Vector location)
   {
-    m_abImage = abImage;
-    m_iZOrder = iZOrder;
+    this->image = image;
+    this->z_order = z_order;
     
     //Set size
-    int sx = al_get_bitmap_height(m_abImage);
-    int sy = al_get_bitmap_width(m_abImage);
-    m_vSize = Vector((double)sx, (double)sy);
+    int sx = al_get_bitmap_height(this->image);
+    int sy = al_get_bitmap_width(this->image);
+    this->size = Vector((double)sx, (double)sy);
 
-    m_vLocation = vLocation;
+    this->location = location;
   }
 
   Drawable::~Drawable()
   {
-    al_destroy_bitmap(m_abImage);
+    al_destroy_bitmap(this->image);
   }
 
   //Getters/Setters
-  ALLEGRO_BITMAP* Drawable::getImage() { return m_abImage; }
-  void            Drawable::setImage(ALLEGRO_BITMAP *abImage) { m_abImage = abImage;}
+  ALLEGRO_BITMAP* Drawable::getImage() { return this->image; }
+  void            Drawable::setImage(ALLEGRO_BITMAP* image) { this->image = image;}
   
-  int              Drawable::getZOrder() { return m_iZOrder; }
-  void            Drawable::setZOrder(int iZOrder) { m_iZOrder = iZOrder; }
+  int             Drawable::getZOrder() { return this->z_order; }
+  void            Drawable::setZOrder(int z_order) { this->z_order = z_order; }
 
-  Vector          Drawable::getLocation() { return m_vLocation; }
-  void            Drawable::setLocation(Vector vLocation) { m_vLocation = vLocation; }
+  Vector          Drawable::getLocation() { return this->location; }
+  void            Drawable::setLocation(Vector location) { this->location = location; }
 
-  Vector          Drawable::getSize() { return m_vSize; }
-  void            Drawable::setSize(Vector vSize) { m_vSize = vSize; }
+  Vector          Drawable::getSize() { return size; }
+  void            Drawable::setSize(Vector vSize) { this->size = size; }
 
   //Game Engine methods
   void Drawable::draw()
   {
-    al_draw_bitmap(m_abImage, (int)m_vSize.X, (int)m_vSize.Y, 0);
+    al_draw_bitmap(this->image, this->size.X, this->size.Y, 0);
   }
 
 }

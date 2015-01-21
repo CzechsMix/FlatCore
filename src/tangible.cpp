@@ -5,9 +5,9 @@
 
 namespace flatcore
 {
-  Tangible::Tangible(ALLEGRO_BITMAP *abImage,
-                    int iZOrder,
-                    Vector vLocation) : Drawable(abImage, iZOrder, vLocation)
+  Tangible::Tangible(ALLEGRO_BITMAP* image,
+                    int z_order,
+                    Vector location) : Drawable(image, z_order, location)
   { /* Empty Ctor */ }
 
   Tangible::~Tangible()
@@ -16,7 +16,7 @@ namespace flatcore
   }
 
   
-  void Tangible::handleCollision(Tangible* spCollider)
+  void Tangible::handleCollision(Tangible* collider)
   {
     /* empty */
   }
